@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mony_manager_flutter/screens/catogory/category_popup.dart';
 import 'package:mony_manager_flutter/screens/catogory/screen_catogory.dart';
 import 'package:mony_manager_flutter/screens/home/widgets/bottom_navigation.dart';
 import 'package:mony_manager_flutter/screens/transaction/screen_transaction.dart';
@@ -37,6 +38,7 @@ class ScreenHome extends StatelessWidget {
             print("Button clicked from Transction page");
           } else if (selectedIndexNotifier.value == 1) {
             print("Button clicked from Catogory page");
+            showCategoryAddPopup(context);
           }
         },
         child: const Icon(Icons.add),
